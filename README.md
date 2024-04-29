@@ -30,12 +30,18 @@ The objectives were to:
 - have fun and learn Django to a good level
 - there was no requirement to create a mobile app, but the web app should be mobile-friendly
 
+[Back to top](#top)
+
+<hr>
+
 <a name="solution"></a>
 # 2. Solution
 
 As per the brief, the solution was implemented using Django.  Since it is a real-time multi-player game, Django Channels was used as a layer on top of websockets to enable persistent two-way connection between the players and the server.
 
 [Back to top](#top)
+
+<hr>
 
 <a name="usage"></a>
 # 3. How To Use The App
@@ -44,6 +50,8 @@ TODO
 
 [Back to top](#top)
 
+<hr>
+
 <a name="lessons"></a>
 # 4. What I Learned
 
@@ -51,10 +59,16 @@ TODO
 
 [Back to top](#top)
 
+<hr>
+
 <a name="techStack"></a>
 # 5. Tech Stack
 
 Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
+
+[Back to top](#top)
+
+<hr>
 
 <a name="install"></a>
 # 6. How To Install And Run Locally
