@@ -6,7 +6,7 @@
 3. [How To Use The App](#how-to-use-the-app)
 4. [What I Learned](#what-i-learned)
 5. [Tech Stack](#tech-stack)
-6. [How To Run Locally](#6.-how-to-install-and-run-locally)
+6. [How To Install And Run Locally](#install)
 
 # 1. Problem
 
@@ -50,7 +50,8 @@ TODO
 
 Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
 
-# 6. How To Install and Run Locally
+<a name="install"></a>
+# 6. How To Install And Run Locally
 
 ## 6.1 Install Python
 - make sure you have Python 3.10+ installed on your machine.  
