@@ -5,7 +5,7 @@
 2. [Solution](#solution)
 3. [How To Use The App](#how-to-use-the-app)
 4. [What I Learned](#what-i-learned)
-5. [Tech Stack](#tech-stack)
+5. [Tech Stack](#techStack)
 6. [How To Install And Run Locally](#install)
 
 # 1. Problem
@@ -46,6 +46,7 @@ TODO
 
 [Back to top](#synaptic-multi-player-quiz-project)
 
+<a name="techStack"></a>
 # 5. Tech Stack
 
 Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
