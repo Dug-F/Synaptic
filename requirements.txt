@@ -1,0 +1,9 @@
+django
+channels[daphne]
+channels-redis
+requests
+requests_async
+openpyxl
+django-crispy-forms
+crispy-bootstrap4
+python-dotenv
