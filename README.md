@@ -1,13 +1,15 @@
+<a name="top"></a>
 # Synaptic Multi-player Quiz Project
 
 ## Contents
 1. [Problem](#problem)
 2. [Solution](#solution)
-3. [How To Use The App](#how-to-use-the-app)
-4. [What I Learned](#what-i-learned)
+3. [How To Use The App](#usage)
+4. [What I Learned](#lessons)
 5. [Tech Stack](#techStack)
 6. [How To Install And Run Locally](#install)
 
+<a name="#problem"></a>
 # 1. Problem
 
 I have a group of friends who meet up online every so often and one of the things we like to do is have a friendly and fun quiz.  We take it in turns to create and run the quiz.  At first we used Kahoot, but found it had some features which were somewhat limiting:
@@ -28,23 +30,26 @@ The objectives were to:
 - have fun and learn Django to a good level
 - there was no requirement to create a mobile app, but the web app should be mobile-friendly
 
+<a name="solution"></a>
 # 2. Solution
 
 As per the brief, the solution was implemented using Django.  Since it is a real-time multi-player game, Django Channels was used as a layer on top of websockets to enable persistent two-way connection between the players and the server.
 
-[Back to top](#synaptic-multi-player-quiz-project)
+[Back to top](#top)
 
+<a name="usage"></a>
 # 3. How To Use The App
 
 TODO
 
-[Back to top](#synaptic-multi-player-quiz-project)
+[Back to top](#top)
 
+<a name="lessons"></a>
 # 4. What I Learned
 
 TODO
 
-[Back to top](#synaptic-multi-player-quiz-project)
+[Back to top](#top)
 
 <a name="techStack"></a>
 # 5. Tech Stack
@@ -134,4 +139,4 @@ Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
 
 <hr>
 
-[Back to top](#synaptic-multi-player-quiz-project)
+[Back to top](#top)
