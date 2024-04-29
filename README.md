@@ -6,7 +6,7 @@
 3. [How To Use The App](#how-to-use-the-app)
 4. [What I Learned](#what-i-learned)
 5. [Tech Stack](#tech-stack)
-6. [How To Run Locally](#6.-how-to-run-locally)
+6. [How To Run Locally](#6.-how-to-install-and-run-locally)
 
 # 1. Problem
 
