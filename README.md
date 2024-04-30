@@ -156,7 +156,7 @@ Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
 
 <hr>
 
-<a name="install"></a>
+<a name="attributions"></a>
 ## 7. Attributions
 
 Attributions for the images used in the demo quiz:
