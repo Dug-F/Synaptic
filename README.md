@@ -17,6 +17,7 @@ I have a group of friends who meet up online every so often and one of the thing
 - if you leave the quiz for a while, it times out.  You cannot rejoin the quiz and retain your previous progress: you are joined as effectively a new user.
 - it is the same if you get disconnected, e.g. you temporarily lose your wifi connection.  You cannot rejoin and retain your previous progress
 - if the quiz host made a mistake when compiling the quiz and accidentally (or deliverately!) marked the wrong answer as correct, there is no way of correcting it
+- once you enter your answer you cannot change it, even if other players are still considering their answer
 - the process of creating the quiz is not very friendly:
   - re-ordering questions is cumbersome
   - getting a summary of the questions and the questions marked as correct is not easy
@@ -57,6 +58,12 @@ TODO
 # 4. What I Learned
 
 TODO
+
+This is the project which really kick-started my journey into the world of web developement.
+
+I learned the principles of how web applications work and in particular how websocket communications work.
+
+The bulk of the solution was written before I understood about SOLID principles.  There are a number of things I would do differently now and over time I will likely work on refactoring parts of the code to make it more flexible.
 
 [Back to top](#top)
 
@@ -137,7 +144,16 @@ Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
 >[!important]
 >Only run `seed_data` and `create_demo_users` once to avoid the possibility of duplicate entries in the database
 
-## 6.7 Start the database
+## 6.7 Install and run Redis
+
+- Django Channels requires Redis to manage websocket communicationbetween multiple clients
+- Redis does not natively run on all platforms
+- probably the easiest way to install and run Redis is by using Docker
+- install Docker Desktop by following the instructions [here](https://www.docker.com/products/docker-desktop/)
+	- you wil probably need to re-start your machine to complete the installation
+ - once Docker is installed, you can install and run a Redis in a container with `docker run --rm -p 6379:6379 redis:7-alpine`
+
+## 6.8 Start the database
 - you should now be able to start the server: `python manage.py runserver`
 	- if it starts successfully, the terminal log should look something like this:
 		```bash
