@@ -17,6 +17,7 @@ I have a group of friends who meet up online every so often and one of the thing
 - if you leave the quiz for a while, it times out.  You cannot rejoin the quiz and retain your previous progress: you are joined as effectively a new user.
 - it is the same if you get disconnected, e.g. you temporarily lose your wifi connection.  You cannot rejoin and retain your previous progress
 - if the quiz host made a mistake when compiling the quiz and accidentally (or deliverately!) marked the wrong answer as correct, there is no way of correcting it
+- once you enter your answer you cannot change it, even if other players are still considering their answer
 - the process of creating the quiz is not very friendly:
   - re-ordering questions is cumbersome
   - getting a summary of the questions and the questions marked as correct is not easy
