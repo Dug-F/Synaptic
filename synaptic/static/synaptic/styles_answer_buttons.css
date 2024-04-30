@@ -16,6 +16,12 @@
     border-color: transparent;
 }
 
+.equal-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .answer-div:hover {
     border-width: 4px;
     border-color: transparent;
