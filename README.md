@@ -8,6 +8,7 @@
 4. [What I Learned](#lessons)
 5. [Tech Stack](#techStack)
 6. [How To Install And Run Locally](#install)
+7. [Attributions](#attributions)
 
 <a name="#problem"></a>
 # 1. Problem
@@ -151,6 +152,18 @@ Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
 - you can now access the synaptic app from a browser by clicking [here](http://localhost:8000/synaptic) or [here](http://127.0.0.1:8000/synaptic) or entering `http://localhost:8000/synaptic` or `http://127.0.0.1:8000/synaptic`in the address bar
 - log in with one of the users you created earlier, or register a new user
 
+[Back to top](#top)
+
 <hr>
 
+<a name="install"></a>
+## 7. Attributions
+
+Attributions for the images used in the demo quiz:
+
+- Batman: Photo by [Marcin Lukasik](https://unsplash.com/@lusik?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/batman-illustratin-uYpOYyJdhRE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- TopGun: Photo by [Peter Pryharski](https://unsplash.com/@meteorphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/blue-and-white-jet-plane-in-mid-air-oapXDz7x_YE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+
 [Back to top](#top)
+
+<hr>
