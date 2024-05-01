@@ -81,6 +81,10 @@ Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
 <a name="install"></a>
 # 6. How To Install And Run Locally
 
+>[!Note]
+>The instructions below are for installation on a Windows machine.
+>On other operating systems there may be slight variations, most notably with creating and/or activating the virtual environment.  Please use the equivalent operations for your OS.
+
 ## 6.1 Install Python
 - make sure you have Python 3.10+ installed on your machine.  
 - this app has not been tested with Python 3.10, only with 3.11.3
@@ -122,6 +126,10 @@ Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
 	- it is recommended to set up a new dedicated email for this purpose
 
 ## 6.6 Build and initialise the database
+- make sure there are no migrations files in the `synaptic/migrations` folder
+	- if there are any files other than `__init__.py` in the `migrations` folder, delete them
+ 	- dont' delete the `__init__.py` file
+  		- (if you accidentally delete it, create a new empty file with the same name)
 - make the database migrations: `python manage.py makemigrations`
 - apply the migrations: `python manage.py migrate`
 - install the required database reference data: `python manage.py seed_data`
