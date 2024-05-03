@@ -69,9 +69,9 @@ db.sqlite3.v*
 
 # Django migration files
 # Ignore migration files within the migrations directory, except __init__.py
-*/migrations/*.py
-*/!migrations/__init__.py
-*/migrations/__pycache__
+#*/migrations/*.py
+#*/!migrations/__init__.py
+#*/migrations/__pycache__
 
 # Flask stuff:
 instance/
