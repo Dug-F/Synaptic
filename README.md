@@ -91,6 +91,7 @@ Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
 - the version of python installed and active determines the version that is used to build the virtual environment in the next step
 	- so make sure that the version of Python you intend to use is active using `python --version`
 - instructions for installing Python are [here](https://www.python.org/about/gettingstarted/)
+
 ## 6.2 Create virtual environment
 - create new folder for project: synaptic
 - `cd synaptic
@@ -126,10 +127,6 @@ Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
 	- it is recommended to set up a new dedicated email for this purpose
 
 ## 6.6 Build and initialise the database
-- make sure there are no migrations files in the `synaptic/migrations` folder
-	- if there are any files other than `__init__.py` in the `migrations` folder, delete them
- 	- dont' delete the `__init__.py` file
-  		- (if you accidentally delete it, create a new empty file with the same name)
 - make the database migrations: `python manage.py makemigrations`
 - apply the migrations: `python manage.py migrate`
 - install the required database reference data: `python manage.py seed_data`
