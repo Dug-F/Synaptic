@@ -39,6 +39,22 @@ The objectives were to:
 <a name="solution"></a>
 # 2. Solution
 
+<h3>Demo/how to video for creating and updating a quiz</h3>
+
+<a href="https://youtu.be/xkSxxRp5_-o" title="Watch the video">
+    <img src="/Synaptic/synaptic/static/synaptic/SynapticCreateQuiz.png" alt="Watch the video" width="500"/>
+</a>
+
+<h3>Demo/how to video for how to play a quiz</h3>
+
+<a href="https://youtu.be/239R66ovHYw" title="Watch the video">
+    <img src="/public/HigherOrLowerDemoVideo.png" alt="Watch the video" width="500"/>
+</a>
+
+<br>
+
+<br>
+
 As per the brief, the solution was implemented using Django.  Since it is a real-time multi-player game, Django Channels was used as a layer on top of websockets to enable persistent two-way connection between the players and the server.
 
 [Back to top](#top)
