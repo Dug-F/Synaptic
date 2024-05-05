@@ -4,7 +4,7 @@
 ## Contents
 1. [Problem](#problem)
 2. [Solution](#solution)
-3. [How To Use The App](#usage)
+3. [Demo And How To Use The App](#usage)
 4. [What I Learned](#lessons)
 5. [Tech Stack](#techStack)
 6. [How To Install And Run Locally](#install)
@@ -39,24 +39,6 @@ The objectives were to:
 <a name="solution"></a>
 # 2. Solution
 
-Here are a couple of videos that demonstrate the Synaptic app and show you how to use it.
-
-<h3>Demo/how to video for creating and updating a quiz</h3>
-
-<a href="https://youtu.be/xkSxxRp5_-o" title="Watch the video">
-    <img src="/synaptic/static/synaptic/SynapticCreateQuiz.png" alt="Watch the video" width="500"/>
-</a>
-
-<h3>Demo/how to video for how to play a quiz</h3>
-
-<a href="https://youtu.be/239R66ovHYw" title="Watch the video">
-    <img src="/synaptic/static/synaptic/SynapticPlayQuiz.png" alt="Watch the video" width="500"/>
-</a>
-
-<br>
-
-<br>
-
 As per the brief, the solution was implemented using Django, Django Channels and JavaScript.  
 
 The application operates in 2 parts, which are connected via the database:
@@ -76,9 +58,25 @@ The code is far from perfect, but it has proven to be pretty robust - it has bee
 <hr>
 
 <a name="usage"></a>
-# 3. How To Use The App
+# 3. Demo and How To Use The App
 
-TODO
+Here are a couple of videos that demonstrate the Synaptic app and show you how to use it.
+
+<h3>Demo/how to video for creating and updating a quiz</h3>
+
+<a href="https://youtu.be/xkSxxRp5_-o" title="Watch the video">
+    <img src="/synaptic/static/synaptic/SynapticCreateQuiz.png" alt="Watch the video" width="500"/>
+</a>
+
+<h3>Demo/how to video for how to play a quiz</h3>
+
+<a href="https://youtu.be/239R66ovHYw" title="Watch the video">
+    <img src="/synaptic/static/synaptic/SynapticPlayQuiz.png" alt="Watch the video" width="500"/>
+</a>
+
+<br>
+
+<br>
 
 [Back to top](#top)
 
