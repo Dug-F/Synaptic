@@ -42,13 +42,13 @@ The objectives were to:
 <h3>Demo/how to video for creating and updating a quiz</h3>
 
 <a href="https://youtu.be/xkSxxRp5_-o" title="Watch the video">
-    <img src="/synaptic/static/synaptic/SynapticCreateQuiz%20.png" alt="Watch the video" width="500"/>
+    <img src="/synaptic/static/synaptic/SynapticCreateQuiz.png" alt="Watch the video" width="500"/>
 </a>
 
 <h3>Demo/how to video for how to play a quiz</h3>
 
 <a href="https://youtu.be/239R66ovHYw" title="Watch the video">
-    <img src="/public/HigherOrLowerDemoVideo.png" alt="Watch the video" width="500"/>
+    <img src="/synaptic/static/synaptic/SynapticPlayQuiz" alt="Watch the video" width="500"/>
 </a>
 
 <br>
