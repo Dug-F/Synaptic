@@ -41,6 +41,8 @@ The objectives were to:
 
 <h3>Demo/how to video for creating and updating a quiz</h3>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xkSxxRp5_-o" frameborder="0" allowfullscreen></iframe>
+
 <a href="https://youtu.be/xkSxxRp5_-o" title="Watch the video">
     <img src="/synaptic/static/synaptic/SynapticCreateQuiz.png" alt="Watch the video" width="500"/>
 </a>
