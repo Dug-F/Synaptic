@@ -39,9 +39,9 @@ The objectives were to:
 <a name="solution"></a>
 # 2. Solution
 
-<h3>Demo/how to video for creating and updating a quiz</h3>
+Here are a couple of videos that demonstrate the Synaptic app and show you how to use it.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xkSxxRp5_-o" frameborder="0" allowfullscreen></iframe>
+<h3>Demo/how to video for creating and updating a quiz</h3>
 
 <a href="https://youtu.be/xkSxxRp5_-o" title="Watch the video">
     <img src="/synaptic/static/synaptic/SynapticCreateQuiz.png" alt="Watch the video" width="500"/>
@@ -57,7 +57,19 @@ The objectives were to:
 
 <br>
 
-As per the brief, the solution was implemented using Django.  Since it is a real-time multi-player game, Django Channels was used as a layer on top of websockets to enable persistent two-way connection between the players and the server.
+As per the brief, the solution was implemented using Django, Django Channels and JavaScript.  
+
+The application operates in 2 parts, which are connected via the database:
+- creating and amending quizzes, which is done in usual Django syncronous fashion using views and forms, etc.
+- playing the quizzes, which is done asynchronously using websockets, Django Channels and consumers.
+
+For the asyncronous components, Django Channels was used as a layer on top of websockets to enable persistent two-way connection between the players and the server.  This keeps all the players in sync so that as nearly as possible, all players are seeing the same thing at the same time.  Django Channels uses async asgi communication and therefore I have incorporated the Daphne server within Django to handle the async calls.  Daphne is incorporated into and starts and ASGI/Daphne version of the development server when the runserver command is executed.
+
+The server sends the countdown timer through the websockets to the client browsers and when the next question is due the formatted question is sent over the websocket to the client.  As well as keeping everything in sync, this is to prevent users requesting questions/answers directly themselves from the browser and so getting an unfair advantage.
+
+A large part of the solution was written before I understood as much about SOLID principles as I do now.  As I look at the code now, there are many things I would like to change to better incorporate SOLID principles.  However, that is a significant undertaking and I will address it slowly over time.  
+
+The code is far from perfect, but it has proven to be pretty robust - it has been used very many times in my circle of friends for quite some time.  There have been a few hiccups, but all have been resolved quickly.  In live operation, the app is hosted on a friends Raspberry Pi, running Ubuntu.
 
 [Back to top](#top)
 
@@ -75,13 +87,11 @@ TODO
 <a name="lessons"></a>
 # 4. What I Learned
 
-TODO
+This is probably the project that taught me most out of any of the recent projects I have undertaken.  It was my first project in Django and is the project which really kick-started my journey into the world of web development.
 
-This is the project which really kick-started my journey into the world of web developement.
+Before I started the project I was reasonably experienced in Python (which I why I decided to go with Django) but knew nothing about Django, web protocols, animations, websockets, Django Channels, Redis and very little about JavaScript - I had to learn all of it as I went along.
 
-I learned the principles of how web applications work and in particular how websocket communications work.
-
-The bulk of the solution was written before I understood about SOLID principles.  There are a number of things I would do differently now and over time I will likely work on refactoring parts of the code to make it more flexible.
+Through undertaking the project, I have learned huge amounts about all of the above topics and I used it as a launching pad to embark on a much deeper exploration of web development which ultimately took me to the School of Code.
 
 [Back to top](#top)
 
@@ -90,7 +100,7 @@ The bulk of the solution was written before I understood about SOLID principles.
 <a name="techStack"></a>
 # 5. Tech Stack
 
-Python, Django, Django Channels, Redis, JavaScript, Ajax, Bootstrap, FontAwesome
+Python, Django, Django Channels, Redis, JavaScript, GSAP (for animations), Ajax, Bootstrap, FontAwesome
 
 [Back to top](#top)
 
