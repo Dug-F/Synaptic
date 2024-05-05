@@ -42,7 +42,7 @@ The objectives were to:
 <h3>Demo/how to video for creating and updating a quiz</h3>
 
 <a href="https://youtu.be/xkSxxRp5_-o" title="Watch the video">
-    <img src="/Synaptic/synaptic/static/synaptic/SynapticCreateQuiz.png" alt="Watch the video" width="500"/>
+    <img src="synaptic/static/synaptic/SynapticCreateQuiz.png" alt="Watch the video" width="500"/>
 </a>
 
 <h3>Demo/how to video for how to play a quiz</h3>
