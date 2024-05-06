@@ -7,8 +7,9 @@
 3. [Demo And How To Use The App](#usage)
 4. [What I Learned](#lessons)
 5. [Tech Stack](#techStack)
-6. [How To Install And Run Locally](#install)
-7. [Attributions](#attributions)
+6. [How To Install And Run Locally - Easier Version Using Docker](#installEasier)
+7. [How To Install And Run Locally - Harder Version Minimally Using Docker](#installHarder)
+8. [Attributions](#attributions)
 
 <a name="#problem"></a>
 # 1. Problem
@@ -104,34 +105,77 @@ Python, Django, Django Channels, Redis, JavaScript, GSAP (for animations), Ajax,
 
 <hr>
 
-<a name="install"></a>
-# 6. How To Install And Run Locally
+<a name="installEasier"></a>
+# 6. How To Install And Run Locally - Easier Version Using Docker
+
+## 6.1 If Docker Desktop is not already installed on your machine, install it
+- install Docker Desktop by following the instructions [here](https://www.docker.com/products/docker-desktop/)
+	- you wil probably need to re-start your machine to complete the installation
+
+## 6.2 Clone the Github repo to the synaptic folder
+- navigate to the folder where you want to install Synaptic
+- from the synaptic folder: `git clone https://github.com/Dug-F/Synaptic.git`
+	- this will create a new directory called `Synaptic` in your current folder
+- change directory into the Synaptic folder: `cd Synaptic`
+
+## 6.3 Create a .env file
+- the .env file contains secret details which are not published to Github
+- you need to create your own version of .env
+- create an empty .env file in /Synaptic (i.e. the same folder as manage.py)
+- the key entries are shown in the `env_keys.txt` file
+	- copy these keys into the .env file
+- the keys then need to have values set for them:
+
+>[!important] 
+**the values for the keys must not have any surrounding quotes, otherwise they will not work correctly**
+	
+- for the SECRET_KEY, a new key can be generated using: 
+	- `docker build -t keygen \keygen`
+	- and then `docker run --rm keygen`
+	- this prints a new secret key and key value in the terminal window
+	- copy and paste the whole secret key line into the .env file (replace any secret key already there)
+
+- for the `EMAIL_USER=` and `EMAIL_PASS=` keys, these must be a valid email user and password
+	- these are only used for sending password reset emails
+	- for demo purposes, if you can live without resetting passwords, you can leave the values here empty
+	- if you use a gmail address, you will probably need to enable ["less secure apps"](https://knowledge.workspace.google.com/kb/how-to-enable-less-secure-application-access-000006971)
+	- it is recommended to set up a new dedicated email for this purpose
+
+## 6.4 Start the docker services
+- make sure you are in the Synaptic directory, i.e. the one that contains manage.py
+- enter the following command: `docker compose up`
+- you can stop the docker services with `docker compose down`
+- note that the docker services are currently configured such that the database is deleted and rebuilt whenever the services are brought down and back up
+	- I will probably change that on a future update to create a database that persists across restarts.
+
+<a name="installHarder"></a>
+# 7. How To Install And Run Locally - Harder Version Minimally Using Docker
 
 >[!Note]
 >The instructions below are for installation on a Windows machine.
 >On other operating systems there may be slight variations, most notably with creating and/or activating the virtual environment.  Please use the equivalent operations for your OS.
 
-## 6.1 Install Python
+## 7.1 Install Python
 - make sure you have Python 3.10+ installed on your machine.  
 - this app has not been tested with Python 3.10, only with 3.11.3
 - the version of python installed and active determines the version that is used to build the virtual environment in the next step
 	- so make sure that the version of Python you intend to use is active using `python --version`
 - instructions for installing Python are [here](https://www.python.org/about/gettingstarted/)
 
-## 6.2 Create virtual environment
+## 7.2 Create virtual environment
 - create new folder for project: synaptic
 - `cd synaptic
 - create virtual environment: `python -m venv venv`
 - activate the virtual environment: `venv\Scripts\activate`
 
-## 6.3 Clone the Github repo to the synaptic folder
+## 7.3 Clone the Github repo to the synaptic folder
 - from the synaptic folder: `git clone https://github.com/Dug-F/Synaptic.git`
 - change directory into the Synaptic folder: `cd Synaptic`
 
-## 6.4 Install Python dependencies
+## 7.4 Install Python dependencies
 - install the required python modules: `pip install -r requirements.txt`
 
-## 6.5 Create a .env file
+## 7.5 Create a .env file
 - the .env file contains secret details which are not published to Github
 - you need to create your own version of .env
 - create an empty .env file in /Synaptic (i.e. the same folder as manage.py)
@@ -152,30 +196,15 @@ Python, Django, Django Channels, Redis, JavaScript, GSAP (for animations), Ajax,
 	- if you use a gmail address, you will probably need to enable ["less secure apps"](https://knowledge.workspace.google.com/kb/how-to-enable-less-secure-application-access-000006971)
 	- it is recommended to set up a new dedicated email for this purpose
 
-## 6.6 Build and initialise the database
+## 7.6 Build and initialise the database
 - make the database migrations: `python manage.py makemigrations`
 - apply the migrations: `python manage.py migrate`
 - install the required database reference data: `python manage.py seed_data`
-- if desired, add demo users
-	- similarly to the .env file, demo users are kept in a secret file which is not in Github
-	- create a new empty file `Synaptic/synaptic/management/commands/demo_users.py`
-	- populate the contents with something like this:
-		```python
-		DEMO_USERS = [
-		    {"username": "Player1", "email": "", "password": "synaptic#default"},
-		    {"username": "Player2", "email": "", "password": "synaptic#default"},
-		    {"username": "Player3", "email": "", "password": "synaptic#default"},
-			{"username": "Player4", "email": "", "password": "synaptic#default"},
-		]
-		```
-	- you can then create these users with `python manage.py create_demo_users`
-	- any user can create a quiz, but they need to be the one who runs it
-- alternatively, you can create users using the Register page when the app is up and running
 
 >[!important]
->Only run `seed_data` and `create_demo_users` once to avoid the possibility of duplicate entries in the database
+>Only run `seed_data` once to avoid the possibility of duplicate entries in the database
 
-## 6.7 Install and run Redis
+## 7.7 Install and run Redis
 
 - Django Channels requires Redis to manage websocket communicationbetween multiple clients
 - Redis does not natively run on all platforms
@@ -184,7 +213,7 @@ Python, Django, Django Channels, Redis, JavaScript, GSAP (for animations), Ajax,
 	- you wil probably need to re-start your machine to complete the installation
  - once Docker is installed, you can install and run a Redis in a container with `docker run --rm -p 6379:6379 redis:7-alpine`
 
-## 6.8 Start the database
+## 7.8 Start the database
 - you should now be able to start the server: `python manage.py runserver`
 	- if it starts successfully, the terminal log should look something like this:
 		```bash
@@ -197,14 +226,14 @@ Python, Django, Django Channels, Redis, JavaScript, GSAP (for animations), Ajax,
 		Quit the server with CTRL-BREAK.
 		```
 - you can now access the synaptic app from a browser by clicking [here](http://localhost:8000/synaptic) or [here](http://127.0.0.1:8000/synaptic) or entering `http://localhost:8000/synaptic` or `http://127.0.0.1:8000/synaptic`in the address bar
-- log in with one of the users you created earlier, or register a new user
+- register new users(s) and log in.
 
 [Back to top](#top)
 
 <hr>
 
 <a name="attributions"></a>
-## 7. Attributions
+## 8. Attributions
 
 Attributions for the images used in the demo quiz:
 

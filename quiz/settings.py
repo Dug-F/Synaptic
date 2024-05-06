@@ -133,6 +133,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ASGI_APPLICATION = "quiz.asgi.application"
 
+REDIS_HOST = os.getenv('REDIS_HOST', '127.0.0.1')
 CHANNEL_LAYERS = {
     'default': {
         ### Method 1: Via redis lab
@@ -146,7 +147,7 @@ CHANNEL_LAYERS = {
         ## Method 2: Via local Redis
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
+            "hosts": [(REDIS_HOST, 6379)],
         },
 
         # ### Method 3: Via In-memory channel layer
